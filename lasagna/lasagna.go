@@ -1,5 +1,7 @@
 package lasagna
 
+import "fmt"
+
 // TODO: define the 'OvenTime' constant
 
 const OvenTime = 40
@@ -24,5 +26,21 @@ func ElapsedTime(numberOfLayers, actualMinutesInOven int) int {
 }
 
 func main() {
-	fmt.println("OvenTime: %d\n", OvenTime)
+	// Task 1: Define the expected oven time
+	fmt.Printf("OvenTime: %d\n", OvenTime)
+
+	// Task 2: Calculate the remaining oven time
+	actualMinutesInOven := 30
+	remainingTime := RemainingOvenTime(actualMinutesInOven)
+	fmt.Printf("RemainingOvenTime: %d\n", remainingTime)
+
+	// Task 3: Calculate the preparation time
+	numberOfLayers := 2
+	preparationTime := PreparationTime(numberOfLayers)
+	fmt.Printf("PreparationTime: %d\n", preparationTime)
+
+	// Task 4: Calculate the elapsed working time
+	elapsedTime := ElapsedTime(3, 20)
+	fmt.Printf("ElapsedTime: %d\n", elapsedTime)
+
 }
